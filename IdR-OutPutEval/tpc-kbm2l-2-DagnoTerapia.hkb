@@ -1,0 +1,8 @@
+File: tpc-kbm2l-2-DagnoTerapia.txt ; 
+Head: 5 1 2  ;rst
+R:  3 4 5 6 7  ;
+S:  2  ;
+T:  0 1  ;
+Dom: 5  5   ;
+Bas: 0  1   ;
+Rol: -1  -1   ;

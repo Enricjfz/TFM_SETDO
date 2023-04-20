@@ -1,0 +1,8 @@
+File: tpc-kbm2l-2-AsfixiaPerinatal.txt ; 
+Head: 2 1 6  ;rst
+R:  7 8  ;
+S:  6  ;
+T:  0 1 2 3 4 5  ;
+Dom: 2  3  2  2  2  3   ;
+Bas: 0  1  2  3  4  5   ;
+Rol: -1  -1  -1  -1  -1  -1   ;

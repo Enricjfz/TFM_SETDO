@@ -1,0 +1,8 @@
+File: tpc-kbm2l-2-PatologLeveGrave.txt ; 
+Head: 3 1 5  ;rst
+R:  6 7 8  ;
+S:  5  ;
+T:  0 1 2 3 4  ;
+Dom: 2  2  2  2  2   ;
+Bas: 0  1  2  3  4   ;
+Rol: -1  -1  -1  -1  -1   ;

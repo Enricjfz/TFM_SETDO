@@ -1,0 +1,8 @@
+File: tpc-kbm2l-2-FactorRHHijo.txt ; 
+Head: 2 1 7  ;rst
+R:  8 9  ;
+S:  7  ;
+T:  0 1 2 3 4 5 6  ;
+Dom: 2  2  2  2  2  2  3   ;
+Bas: 0  1  2  3  4  5  6   ;
+Rol: -1  -1  -1  -1  -1  -1  -1   ;

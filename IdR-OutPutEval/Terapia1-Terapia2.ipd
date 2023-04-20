@@ -1,0 +1,8 @@
+; ipd -> itd -> tdu
+; indice de protocolo de decisiones en orden cronologico
+; instancia de tabla de decision
+; tabla de decision-utilidad
+DimParam:  -1  ;
+PARAMS:  ;
+Terapia1  ;
+Terapia2  ;
