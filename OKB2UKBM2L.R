@@ -22,11 +22,13 @@ OptimalKB_to_UKBM2L <- function(dfx) {
   colNames <- t(colNames) #transponemos
   write(colNames,file = file,append=FALSE, sep=" ")
   
-  #Se crea otro fichero que tiene la UKBM2L
+  #Se crea la lista en forma de matriz (decision,offset) 
   
-  offset <- matrix(c(1:nrow(dfx)-1)) #offset
-  decision <- matrix(dfx[[ncol(dfx)-1]]) #optimal decision
-  mat1 <- cbind(offset,decision)
+  decision <- dfx[[ncol(dfx)]] #optimal decision
+  mat1 <- reduce(decision)
+  
+  #Se crea otro fichero que tiene la UKBM2L 
+  
   
   file2 <- "base_knm2l.txt"
   if(file.exists(file2)) {
