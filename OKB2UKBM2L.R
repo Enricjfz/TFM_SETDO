@@ -44,6 +44,8 @@ OptimalKB_to_UKBM2L <- function(dfx) {
   
   #escribimos en el fichero
   write.table(mat1,file = file2,sep=",")
+  
+  return(mat1)
 }
 
 #pruebas de la funcion

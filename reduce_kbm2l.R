@@ -13,7 +13,7 @@ reduce <- function(arr) {
   for (i in 2:n) {
     # Si el elemento actual es distinto de sus vecinos, añadirlo al vector reducido
     if (arr[i] != arr[i - 1]) {
-      cat("offset : ",i-1,"\n")
+      #cat("offset : ",i-1,"\n")
       offset_arr[idx] <- (i-2)
       reduced_arr[idx] <- arr[i-1]
       idx <- idx + 1
