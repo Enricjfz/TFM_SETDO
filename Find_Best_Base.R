@@ -15,7 +15,6 @@ Find_Best_Base <- function(dfx) {
   for (i in 1:n_col) {
     for(j in 1:n_col) {
       if(i == j) {
-        p_perm <- base_inicial
         next #no permutation
       }
       #swap base, se comprueba si esta en la lista
