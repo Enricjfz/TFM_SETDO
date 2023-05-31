@@ -44,7 +44,7 @@ Find_Best_Base <- function(dfx, base_actual,lista_bases, index_lista) {
       
       lista_bases[[index_lista]] <- p_perm
       index_lista <- index_lista + 1
-      dfx_swapped <- swap_columns_order(dfx,i,j)
+      dfx_swapped <- swap_columns_order(dfx,i,j,1)
       new_kbm2l <- reduce(dfx_swapped[[n_col +1]])
       if(dim(new_kbm2l)[1] < dim(kbm2l_actual)[1]) {
         #hemos encontrado una base mejor

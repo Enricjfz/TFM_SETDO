@@ -1,4 +1,4 @@
-swap_columns_order <- function(df, col_origen, col_destino) {
+swap_columns_order <- function(df, col_origen, col_destino, order) {
   n_cols = dim(df)[2]
   if(col_origen > n_cols || col_origen < 1 || col_destino < 1 || col_destino > n_cols || col_origen == col_destino) {
     cat("Wrong indexes\n")
@@ -16,10 +16,11 @@ swap_columns_order <- function(df, col_origen, col_destino) {
  colnames(ret_df)[col_origen] <-colnames(ret_df)[col_destino]
  colnames(ret_df)[col_destino] <- back_name
  
- #Se ordenan las columnas según la primera de estas
+ ##Se ordenan las columnas según la primera de estas si order es true
  
- ret_df <- ret_df[order(ret_df[[1]]),]
-  
+ if(order) {
+   ret_df <- ret_df[order(ret_df[[1]]),]
+ }
   
   return(ret_df)
 }
