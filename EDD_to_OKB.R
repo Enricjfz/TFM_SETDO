@@ -22,9 +22,8 @@ EDD_to_OKB <- function(df3) {
       dfx <- rbind( dfx,as.data.frame( df.[k,]))
       #cat(i,"<",k,">\n")
     }
-   #eliminamos la primera columna y la última
-   dfx <- dfx[,-1]
-   dfx <- dfx[,ncol(dfx)]
+   #eliminamos la última columna
+   dfx <- dfx[,-c(ncol(dfx))]
     
    #creamos un fichero y guardamos el dataframe
    write.csv(dfx, file = "OptimalKB.csv")
@@ -35,4 +34,6 @@ EDD_to_OKB <- function(df3) {
 
 #-----------------------pruebas---------------------
 df3 <- read.csv(file="Terapia1.txt",sep=",",header=TRUE)
+df_nhlv2 <- read.csv(file = "CT.RT.SCHEDULE.txt",sep=",",header=TRUE)
+dfx_nhlv2 <- EDD_to_OKB(df_nhlv2)
 EDD_to_OKB(df3)
