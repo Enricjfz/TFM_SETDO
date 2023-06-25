@@ -1,15 +1,15 @@
 get_optimal_base <- function(dfx, base_inicial) {
+  #iniciación del método recursivo
   attr <- length(base_inicial)
   if(dim(dfx)[2]-1 != attr) {
     cat("wrong initial base\n")
     return(-1)
   }
   
-  lista_bases_visitadas <- list()
+  lista_bases_visitadas <- list() #inicialización de la lista
   indice_lista_actual <- 1
   lista_bases_visitadas[[indice_lista_actual]] <- base_inicial
   indice_lista_actual <- indice_lista_actual + 1
-  #n_bases <- factorial(attr)
   best_perm <- Find_Best_Base(dfx,base_inicial,lista_bases_visitadas,indice_lista_actual)
   return(best_perm)
   
@@ -48,6 +48,8 @@ Find_Best_Base <- function(dfx, base_actual,lista_bases, index_lista) {
       new_kbm2l <- reduce(dfx_swapped[[n_col +1]])
       if(dim(new_kbm2l)[1] < dim(kbm2l_actual)[1]) {
         #hemos encontrado una base mejor
+        print(dim(new_kbm2l)[1])
+        print(p_perm)
         best_dfx <- dfx_swapped
         kbm2l_actual <- new_kbm2l
         best_perm <- p_perm
@@ -67,9 +69,12 @@ Find_Best_Base <- function(dfx, base_actual,lista_bases, index_lista) {
   }
   else {
     #hemos encontrado una base mejor, supuesto optimo
-    return(best_perm)
+    return(best_dfx)
   }
   
 }
 
+
+#get_optimal_base(dfx_pruebas,c(1,2,3,4,5,6))
+#df3 <- get_optimal_base(dfx_nhlv2,c(1,2,3,4,5,6,7,8))
 

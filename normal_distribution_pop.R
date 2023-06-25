@@ -1,4 +1,5 @@
 library(mvtnorm)
+
 #use a normal distribution to generate new population
 calculate_new_pop <- function(fitness_pop,k,n) {
   #inputs: 
@@ -22,7 +23,7 @@ update_umda <- function(M,perm,k) {
   #Perm is a set of permutations which are the best ones according to the fitness function
   #k is the number of atributes of the problem
   #returns the updated M
-  perm <- as.matrix(perm)
+  #perm <- as.matrix(perm)
   for( j in 1:k) {
     fP <- factor(P[,j],levels=1:k) #actualizacion de M + ruido evitar optimos locales (evitar 0)
     M[,j] <- table(fP) + abs(rnorm(k))/k 

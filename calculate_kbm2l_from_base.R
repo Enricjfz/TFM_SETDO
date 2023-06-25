@@ -4,6 +4,7 @@ calculate_kbm2l_from_base <- function(to_base,original_base,dfx) {
     cat("Bases must have the same length\n")
     return(-1)
   }
+  #loops until original base is equals to to_base
   attr <- length(to_base)
   new_dfx <- dfx
   while(identical(to_base,original_base) == FALSE) {
@@ -24,6 +25,8 @@ calculate_kbm2l_from_base <- function(to_base,original_base,dfx) {
   
   new_dfx <- new_dfx[order(new_dfx[[1]]),]
   
+  #print(new_dfx)
+  
   kbm2l <- reduce(new_dfx[[attr+1]])
   
   items <- dim(kbm2l)[1]
@@ -31,3 +34,4 @@ calculate_kbm2l_from_base <- function(to_base,original_base,dfx) {
   return(items)
   
 }
+
